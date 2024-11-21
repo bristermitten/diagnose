@@ -16,6 +16,7 @@ dependencies:
 - prettyprinter-ansi-terminal >= 1.1.2 && < 2
 - unordered-containers >= 0.2.11 && < 0.3
 - wcwidth >= 0.0.1 && <1
+- megaparsec >= 9.0.0
 
 default-extensions:
 - OverloadedStrings
@@ -63,9 +64,7 @@ when:
 
     cpp-options:
     - -DUSE_AESON
-  - condition: flag(megaparsec-compat)
-    dependencies:
-    - megaparsec >= 9.0.0
+    
   - condition: flag(parsec-compat)
     dependencies:
     - parsec >= 3.1.14
